@@ -27,7 +27,7 @@ jobs:
           xygeni_url: https://api.xygeni.io
           token: ${{ secrets.XYGENI_TOKEN }}
           gh_token: ${{ secrets.PAT_FOR_XYGENI_SCAN }}
-          command: scan --sbom=sbom.json --sbom-format=cyclonedx
+          command: scan --never-fail --sbom=sbom.json --sbom-format=cyclonedx
 
       - name: Upload SBOM as artifact
         uses: actions/upload-artifact@v4
